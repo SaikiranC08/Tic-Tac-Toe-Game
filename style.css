@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    background-color: #1A1A2E;
+    font-family: 'Roboto', sans-serif; /* Use a more modern font */
+    color: #EAEAEA; /* Improve readability with lighter text */
+}
+
+.container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 1rem;
+    background-color: #162447; /* Darker background for better contrast */
+    padding: 1.5rem; /* Increased padding for better spacing */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Add a subtle shadow for depth */
+}
+
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    font-size: 8vmin;
+    border-radius: 1.5rem;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #E94560; /* Stronger color for the text */
+    background-color: #1F4068; /* Darker background for boxes */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.box:hover {
+    background-color: #1B1B2F; /* Subtle hover effect */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.reset-btn, #new-btn {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    background-color: #1F4068; /* Match button color with the boxes */
+    color: #EAEAEA;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Add transition effects */
+}
+
+.reset-btn:hover, #new-btn:hover {
+    background-color: #E94560; /* Brighter hover effect */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.msg-container {
+    position: fixed; /* Position fixed for better visibility */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 3rem; /* Increased padding for a more prominent container */
+    border-radius: 1rem;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8); /* Add a strong shadow for emphasis */
+}
+
+#msg {
+    color: #F5C518; /* Use a gold color for the winner message */
+    font-size: 6vmin;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+}
+
+.hide {
+    display: none;
+}
